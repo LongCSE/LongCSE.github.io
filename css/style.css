@@ -13,3 +13,36 @@
     width: 1133px !important;
     height: 300px !important;
 }
+footer {
+    margin: 20px;
+    background-color: cadetblue;
+}
+.container-fluid {
+    display: block;
+}
+.copyright-left{
+    float: left;
+    margin: 20px;
+}
+.copyright-left span{
+    text-align: center;
+}
+.contact-us{
+    margin: 20px;
+    display: block;
+}
+.contact-us ul{
+    float: right;
+    display: block;
+    list-style-type: none;
+}
+.contact-us ul i{
+    width: 20px;
+    height: 15px;
+}
+.video-center {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin-top: 20px;
+}
