@@ -26,4 +26,13 @@ $(document).ready(function(){
     $(".right").click(function(){
         $("#myCarousel").carousel("next");
     });
+
+    function resize() {
+        console.log("resize viewport");
+        if( $( window ).height() < 400){
+            console.log("true");
+            // $('.connect_item').first().addClass("active");
+        }
+    }
+    window.onresize = resize;
 });
