@@ -26,7 +26,38 @@ $(document).ready(function(){
     $(".right").click(function(){
         $("#myCarousel").carousel("next");
     });
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 1500) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
 
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+    var JSObjectStandard = {
+      default: {
+
+      },
+
+    };
+    $.extend(JSObjectStandard, {
+       init : function () {
+
+       },
+        setupEvent : function () {
+
+        },
+    });
+    $(document).ready = function () {
+        window.JSObjectStandard = JSObjectStandard;
+    };
     function resize() {
         console.log("resize viewport");
         if( $( window ).height() < 400){
