@@ -94,6 +94,9 @@ footer {
     .fr-col.m2 {
         width: 16.66666%
     }
+    .fr-col.m12 {
+        width: 99.99999%
+    }
 }
 .fr-content {
     max-width: 980px;
@@ -118,4 +121,8 @@ footer {
 
 .fr-padding {
     padding: 8px 16px !important
+}
+
+.fr-container {
+    padding: 0.01em 16px
 }
