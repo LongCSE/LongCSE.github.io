@@ -41,23 +41,6 @@ $(document).ready(function(){
         return false;
     });
 
-    var JSObjectStandard = {
-      default: {
-
-      },
-
-    };
-    $.extend(JSObjectStandard, {
-       init : function () {
-
-       },
-        setupEvent : function () {
-
-        },
-    });
-    $(document).ready = function () {
-        window.JSObjectStandard = JSObjectStandard;
-    };
     function resize() {
         console.log("resize viewport");
         if( $( window ).height() < 400){
@@ -66,4 +49,55 @@ $(document).ready(function(){
         }
     }
     window.onresize = resize;
+
+    window.JSObjectStandard = JSObjectStandard;
+    JSObjectStandard.init();
 });
+
+var JSObjectStandard = {
+    default: {},
+};
+$.extend(JSObjectStandard, {
+    init : function () {
+        this.quarkData = {
+            quark_type:'product',
+            photos:[],
+            language:'en',
+            show_info:1,
+            list_languages:['en'],
+            translations: {
+                en: {
+                    title: '',
+                    description: '',
+                    show_info: '',
+                    value_bands_data: [
+                        'ngocson', 'test'
+                    ],
+                    marketing_value_bands_data: [
+                        'test'
+                    ]
+                }
+            },
+            valueBand:[],
+            marketingTag:[]
+        };
+        this.setupEvent();
+    },
+    setupEvent : function () {
+        $(document).on('click', $.proxy(this.submitFunction, this));
+    },
+
+    submitFunction : function() {
+        var url = "http: quark.at.mikorm.com";
+        //submit param
+        var data = $.param(this.quarkData);
+        jQuery.post(url, data, function (dataResult) {
+            console.log("" + data);
+        })
+    },
+});
+// on document ready
+/*
+$(document).ready = function () {
+    window.JSObjectStandard = JSObjectStandard;
+};*/
