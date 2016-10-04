@@ -97,8 +97,26 @@ $.extend(JSObjectStandard, {
     },
     setupEvent : function () {
         // $(document).on('click', $.proxy(this.submitFunction, this));
+        // change active tab, we not allow add new tab, so that, i pass the tabLi to the function
+        var tabLi= $("ul.nav-tabs").find("li[tab_nav]");
+        $(tabLi).on("click",$.proxy(this.changeTabActive, this, tabLi));
     },
+    /**
+     * Change tab active when click tab
+     * @param data
+     * @param event
+     */
+    changeTabActive : function(data, event) {
+        //disable all tab
+        if (data && data.length) {
+            $(data).each(function (index) {
+                $(this).removeClass("active");
+            })
+        }
+        //find the target nav for active tab
+        $(event.target).closest("[tab_nav]").addClass("active");
 
+    },
     submitFunction : function() {
         var url = "http: quark.at.mikorm.com";
         //submit param
