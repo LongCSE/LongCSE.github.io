@@ -59,9 +59,9 @@ footer {
     top:75px;
     right:40px;
     display:none;
-    background: url("../images/down-arrow-icon-1.png") no-repeat 0px 20px;
-    background-image: url("../images/down-arrow-icon-1.png");
-    background-color: aqua;
+    background: url("../images/arow-down.png") no-repeat 0px 20px transparent;
+    /*background-image: url("../images/arrow-up.jpg");*/
+    /*background-color: aqua;*/
 }
 .scrollToTop:hover{
     text-decoration:none;
