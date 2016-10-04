@@ -53,6 +53,18 @@ $(document).ready(function(){
     window.JSObjectStandard = JSObjectStandard;
     JSObjectStandard.init();
 });
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("fr-show") == -1) {
+        x.className += " fr-show";
+        x.previousElementSibling.className += " fr-theme-d1";
+    } else {
+        x.className = x.className.replace("fr-show", "");
+        x.previousElementSibling.className =
+            x.previousElementSibling.className.replace(" fr-theme-d1", "");
+    }
+}
 
 var JSObjectStandard = {
     default: {},
@@ -84,7 +96,7 @@ $.extend(JSObjectStandard, {
         this.setupEvent();
     },
     setupEvent : function () {
-        $(document).on('click', $.proxy(this.submitFunction, this));
+        // $(document).on('click', $.proxy(this.submitFunction, this));
     },
 
     submitFunction : function() {

@@ -112,7 +112,8 @@ footer {
 }
 .fr-half {
     float: left;
-    width: 100%;
+    width: 50%;
+    padding: 1px;
 }
 
 .fr-border {
@@ -125,4 +126,41 @@ footer {
 
 .fr-container {
     padding: 0.01em 16px
+}
+
+.fr-show {
+    display: block !important;
+}
+
+.fr-theme-d1 {
+    color: #fff !important;
+    background-color: #57707d !important
+}
+
+.fr-accordion-content {
+    cursor: auto;
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fr-btn-block {
+    width: 100%;
+}
+
+.fr-center {
+    text-align: center;
+}
+.fr-green {
+    color: #ffffff !important;
+    background-color: #4CAF50 !important;
+}
+.fr-red {
+    color: #fff!important;
+    background-color: #f44336!important;
+}
+.fr-btn-block:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
