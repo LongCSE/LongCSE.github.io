@@ -56,8 +56,11 @@ footer {
     color: #444;
     text-decoration: none;
     position:fixed;
-    top:75px;
-    right:40px;
+    /*khoang cach sovoi top*/
+    top:600px;
+    /*khoang cach so voi right*/
+    right:120px;
+
     display:none;
     background: url("../images/arow-down.png") no-repeat 0px 20px transparent;
     /*background-image: url("../images/arrow-up.jpg");*/
