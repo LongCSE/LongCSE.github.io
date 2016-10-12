@@ -27,9 +27,35 @@
     <!--css link-->
     <link rel="stylesheet" href="css/style.css">
     <!--javascript link-->
-    <script type="text/javascript" src="js/standard.object.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/words.mobile.js"></script>
 </head>
 <body>
         <h1>THẾ GIỚI DI ĐỘNG</h1>
+        <header>
+            <div class="wrap-main">
+                <a class="logo" title="Về trang chủ Thegioididong.com" href="#"><i class="icontgdd-logo"></i></a>
+                <form id="search-site" action="/tim-kiem" method="get" onsubmit="return submitSearchForm();" autocomplete="off">
+                    <input class="topinput" id="search-keyword" name="search-keyword" type="text" placeholder="Bạn tìm gì..." autocomplete="off" onkeydown="CheckTimer()" onkeyup="SuggestSearch(event);" value="" maxlength="50">
+                    <button class="btntop" type="submit" ><i class="icontgdd-topsearch fa fa-search"></i></button>
+                </form>
+                <div id="SuggestSearch"></div>
+                <nav>
+                    <a class="mobile" href="/dtdd"><i class="icontgdd-mobile"></i>Điện thoại</a>
+                    <a href="/may-tinh-bang" class="tablet"><i class="icontgdd-tablet"></i>Tablet</a>
+                    <a href="/laptop" class="laptop"><i class="icontgdd-laptop"></i>Laptop</a>
+                    <a href="/phu-kien" class="phukien"><i class="icontgdd-phukien"></i>Phụ kiện</a>
+                    <a href="/may-doi-tra" class="maydoitra"><i class="icontgdd-maydoitra"></i>Đã sử dụng</a>
+                    <a href="/sim-so-dep" class="simcard"><i class="icontgdd-simcard"></i>Sim, thẻ</a>
+                    <a href="/tin-tuc" class="news"><i class="icontgdd-news"></i>Công Nghệ</a>
+                    <a href="/hoi-dap" class="ask"><i class="icontgdd-ask"></i>Hỏi đáp</a>
+                    <a href="/game-ung-dung" class="gameapp"><i class="icontgdd-gameapp"></i>Game, App</a>
+                    <a href="/khuyen-mai" class="promo"><i class="icontgdd-promo"></i>Khuyến mãi</a>
+                </nav>
+            </div>
+            <div class="clr"></div>
+
+        </header>
+    <div class="nav"></div>
 </body>
 </html>
