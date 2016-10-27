@@ -1,0 +1,28 @@
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+    background-color: #00bcd4;
+}
+.tab-content {
+    padding: 10px;
+}
+.tab-menu {
+    padding: 20px;
+}
+li {
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    border: dashed 5px #000000;
+}
+.tab {
+    background-color: #4CAF50;
+    float: left;
+    margin: 40px;
+}
+.tab.active {
+    border: solid 2px #000000;
+    background-color: #b4aa50;
+}
