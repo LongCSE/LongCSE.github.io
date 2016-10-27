@@ -1,7 +1,7 @@
 /**
  * Created by nqlong on 12-Oct-16.
  */
-var DEBUG = true;
+const DEBUG = true;
 (function ($) {
     var WordMobile = {
         default: {
